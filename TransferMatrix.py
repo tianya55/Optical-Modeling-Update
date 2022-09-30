@@ -531,12 +531,12 @@ class OpticalModeling(object):
             fig5.savefig(fname5, transparent=False)
             
             #用于合成一副图
-            f = open("Pickle/" + savename + 'G', 'wb')
+            f = open(savename + 'G', 'wb')
             # 将变量存储到目标文件中区
             pickle.dump([X,Y,self.Gx.T], f)
             # 关闭文件
             f.close()
-            f = open("Pickle/" + savename + 'Gself', 'wb')
+            f = open(savename + 'Gself', 'wb')
             # 将变量存储到目标文件中区
             pickle.dump(self, f)
             # 关闭文件
