@@ -12,8 +12,8 @@ import pickle
 
 
 filelist = [
-    "Result\20220930 171924\",
-    "Result\20220930 171924\",
+    "Result/20220930 171924/",
+    "Result/20220930 171924/",
 ]#两个文件的目录
 front_size = 14
 
@@ -38,7 +38,7 @@ for i in range(len(filelist)):
 fig.colorbar(im, ax=ax.ravel().tolist())
 
 for i in range(len(filelist)):
-    with open(filelist[i]+"_EfieldE2self",'rb') as f:
+    with open(filelist[i]+"_Fig_EfieldE2self",'rb') as f:
         self = pickle.load(f)
 for i in range(len(filelist)):
     for matind in range(2, len(self.layers) + 1):
