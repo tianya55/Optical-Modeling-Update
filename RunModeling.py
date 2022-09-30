@@ -5,6 +5,8 @@
 
 from TransferMatrix import OpticalModeling
 import matplotlib.pyplot as plt
+import os
+import datetime
 plt.style.use('ggplot')  # or use 'classic' or any in plt.style.available
 # plt.ion()
 
@@ -50,7 +52,17 @@ there sould be a "Mater1_n" column, and a "Mater1_k" column.
 The header for the wavelength column ***MUST be*** : "Wavelength (nm)"
 """
 
-libname = "Index_of_Refraction_library_Demo.csv"
+SampleName = "Index_of_Refraction_library_Demo"
+libname = SampleName + ".csv"
+
+TimeTable = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+os.mkdir("Result/" + TimeTable)
+SaveName = "Result/" + TimeTable + "/"  # prefix of the file names
+
+
+
+
+
 
 # file name of the AM1.5 solar spectra, already in the folder
 # change it ONLY if you want to use your own file
@@ -78,7 +90,7 @@ plotE = True   # whehter to plot E-field vs wavelength
 plotAbs = True  # whether to plot absorption vs wavelength
 plotGen = True  # whether to plot generation rate and spectral absorption rate
 
-SaveName = "Result"  # prefix of the file names
+
 # whether to save the data as csv files
 saveDataE, saveDataAbs, saveDataGen = False, False, False
 # wherther to save the figures
