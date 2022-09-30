@@ -24,7 +24,7 @@ plt.subplots_adjust(left=None,bottom=None,right=None,top=None,wspace=0.4,hspace=
 data = []
 
 for i in range(len(filelist)):
-    with open(filelist[i]+"_EfieldE2",'rb') as f:
+    with open(filelist[i]+"_Fig_EfieldE2",'rb') as f:
         X,Y,Z = pickle.load(f)
     ax[i].set_ylabel('Wavelength (nm)', size=front_size)
     ax[i].set_xlabel('Position (nm)', size=front_size)
@@ -71,7 +71,7 @@ for i in range(len(filelist)):
 fig.colorbar(im, ax=ax.ravel().tolist())
 
 for i in range(len(filelist)):
-    with open(filelist[i]+"Gself",'rb') as f:
+    with open(filelist[i]+"_FigGself",'rb') as f:
         self = pickle.load(f)
 for i in range(len(filelist)):
     for matind in range(2, len(self.layers) + 1):
