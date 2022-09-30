@@ -402,7 +402,7 @@ class OpticalModeling(object):
             ax2.text(x_text, ax2.get_ylim()[1] + 0.01, self.layers[matind-1],
                      size=14, va="bottom", ha="center")
         ax1.set_xlim(0, max(self.x_pos))
-        ax1.legend(loc='upper right', fontsize=18).draggable()
+        ax1.legend(loc='upper right', fontsize=18).set_draggable(state=1)
 
         fig1.tight_layout()
         fig2.tight_layout()
@@ -441,7 +441,7 @@ class OpticalModeling(object):
                  label="Transmission", linewidth=2)
         ax3.plot(self.WL, 100.0 * self.Reflection,
                  label="Reflection", linewidth=2)
-        ax3.legend(loc='upper right', fontsize=14, frameon=False).draggable()
+        ax3.legend(loc='upper right', fontsize=14, frameon=False).set_draggable(state=1)
 
         ax3.set_ylim(ymin=0, ymax=100.0)
         ax3.set_xlim(xmin=self.WL[0], xmax=self.WL[-1])
