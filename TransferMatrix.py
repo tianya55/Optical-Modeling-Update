@@ -90,7 +90,7 @@ class OpticalModeling(object):
         self.CalGen()
         if saveFigE or saveFigAbs or saveFigGen:
             path = os.getcwd()
-            outdir = os.path.normpath(path + os.sep + "Results")
+            outdir = os.path.normpath(path + os.sep)
             if not os.path.exists(outdir):
                 os.makedirs(outdir)
         if plotE:
@@ -118,7 +118,7 @@ class OpticalModeling(object):
 
         if saveE or saveAbs or saveGen:
             path = os.getcwd()
-            outdir = os.path.normpath(path + os.sep + "Results")
+            outdir = os.path.normpath(path + os.sep)
             if not os.path.exists(outdir):
                 os.makedirs(outdir)
 
@@ -408,7 +408,7 @@ class OpticalModeling(object):
         fig2.tight_layout()
 
         if savefig:
-            outdir = os.path.normpath(os.getcwd() + os.sep + "Results")
+            outdir = os.path.normpath(os.getcwd() + os.sep)
             fname1 = os.path.normpath(outdir + os.sep + savename +
                                       "_selectedWL." + figformat)
             fname2 = os.path.normpath(outdir + os.sep + savename +
@@ -449,7 +449,7 @@ class OpticalModeling(object):
         plt.tight_layout()
 
         if savefig:
-            outdir = os.path.normpath(os.getcwd() + os.sep + "Results")
+            outdir = os.path.normpath(os.getcwd() + os.sep)
             fname3 = os.path.normpath(outdir + os.sep + savename +
                                       "." + figformat)
             fig3.savefig(fname3, transparent=False)
@@ -509,7 +509,7 @@ class OpticalModeling(object):
         fig5.tight_layout()
 
         if savefig:
-            outdir = os.path.normpath(os.getcwd() + os.sep + "Results")
+            outdir = os.path.normpath(os.getcwd() + os.sep)
             fname4 = os.path.normpath(
                 outdir + os.sep + savename + "_Gen_position_." + figformat)
             fname5 = os.path.normpath(
