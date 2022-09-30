@@ -55,6 +55,8 @@ The header for the wavelength column ***MUST be*** : "Wavelength (nm)"
 SampleName = "Index_of_Refraction_library_Demo"
 libname = SampleName + ".csv"
 
+if not os.path.exists("Result"):
+    os.makedirs("Result")
 TimeTable = datetime.datetime.now().strftime('%Y%m%d %H%M%S')
 os.mkdir("Result/" + TimeTable)
 SaveName = "Result/" + TimeTable + "/"  # prefix of the file names
