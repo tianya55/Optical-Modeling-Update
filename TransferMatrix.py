@@ -416,7 +416,17 @@ class OpticalModeling(object):
 
             fig1.savefig(fname1, transparent=False)
             fig2.savefig(fname2, transparent=False)
-
+            #用于合成一副图
+            f = open(savename + 'E2', 'wb')
+            # 将变量存储到目标文件中区
+            pickle.dump([X,Y,E2.T], f)
+            # 关闭文件
+            f.close()
+            f = open(savename + 'E2self', 'wb')
+            # 将变量存储到目标文件中区
+            pickle.dump(self, f)
+            # 关闭文件
+            f.close()            
         return None
 
     def PlotAbs(self, savename="Result", savefig=False, figformat='pdf'):
@@ -518,7 +528,19 @@ class OpticalModeling(object):
 
             fig4.savefig(fname4, transparent=False)
             fig5.savefig(fname5, transparent=False)
-
+            
+            #用于合成一副图
+            f = open("Pickle/" + savename + 'G', 'wb')
+            # 将变量存储到目标文件中区
+            pickle.dump([X,Y,self.Gx.T], f)
+            # 关闭文件
+            f.close()
+            f = open("Pickle/" + savename + 'Gself', 'wb')
+            # 将变量存储到目标文件中区
+            pickle.dump(self, f)
+            # 关闭文件
+            f.close()
+            
         return None
 
     def JscReport(self):
