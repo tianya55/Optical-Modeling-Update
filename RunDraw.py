@@ -56,7 +56,7 @@ plt.clf()
 fig, ax = plt.subplots(1, 2,figsize=(14,5))
 plt.subplots_adjust(left=None,bottom=None,right=None,top=None,wspace=0.4,hspace=0.15)
 for i in range(len(filelist)):
-    with open(filelist[i]+"G",'rb') as f:
+    with open(filelist[i]+"_FigG",'rb') as f:
         X,Y,Z = pickle.load(f)
 
     ax[i].set_ylabel('Wavelength (nm)', size=front_size)
