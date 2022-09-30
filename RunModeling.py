@@ -92,12 +92,12 @@ plotGen = True  # whether to plot generation rate and spectral absorption rate
 
 
 # whether to save the data as csv files
-saveDataE, saveDataAbs, saveDataGen = False, False, False
+saveDataE, saveDataAbs, saveDataGen = True, True, True #False, False, False
 # wherther to save the figures
 # default format is vector graphic 'pdf' (with non-transparent background)
 # can also use 'png', 'jpg' or someother format matplotlib supports
 figformat = 'pdf'
-saveFigE, saveFigAbs, saveFigGen = False, False, False
+saveFigE, saveFigAbs, saveFigGen = True, True, True #False, False, False
 
 # ------------------- End of user input -------------------------------
 
